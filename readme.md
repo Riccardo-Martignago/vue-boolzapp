@@ -16,3 +16,9 @@ Milestone 4
 Milestone 5 - opzionale
     Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
     Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti 
+
+||PROCEDURA||
+
+Replico il layout
+Assegno due classi diverse per la sezione dei messaggi per farli apparire verdi e bianchi 
+Creo un v-for per stampare in pagina immagine e nome del contatto
