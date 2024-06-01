@@ -129,14 +129,19 @@ input{
 .cont-chat{
     overflow-y: scroll;
     flex: 1;
+    background-color: white;
 }
-.chataperte,
-.head-chat{
+.chataperte{
+    display: flex;
+    flex-direction: column;
+}
+.dati,
+.img-name{
     display: flex;
     justify-content: space-between;
 }
-.dati{
-    display: flex;
+.orario{
+    text-align: right;
 }
 .main-chat{
     background-image: url(../img/mine.jpg);
@@ -147,8 +152,14 @@ input{
     width: 80%;
     margin: 0 auto;
 }
-.messaggio-prova{
+.messaggio-scritto{
     background-color: #d5f9ba;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.messaggio-inviato{
+    background-color: white;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;

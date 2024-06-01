@@ -44,14 +44,16 @@
                         </div>
                         <div class="cont-chat">
                             <div class="chataperte">
-                                <div class="dati">
-                                    <img src="./img/avatar_1.jpg" alt="" class="utente-img">
-                                    <p>
-                                        Ricevi notifiche di nuovi messaggi <br>
-                                        <span>Attiva notifiche desktop</span>
-                                    </p>
+                                <div class="dati" v-for = "utente in contacts">
+                                    <div class="img-name">
+                                        <img :src="utente.avatar + '.jpg'" alt="" class="utente-img">
+                                        <p>
+                                            {{utente.name}} <br>
+                                            <span>Ultimo messaggio inviato</span>
+                                        </p>
+                                    </div>
+                                    <div class="orario">12:00</div>
                                 </div>
-                                <div class="orario">12:00</div>
                             </div>
                         </div>
                     </article>
@@ -74,7 +76,7 @@
                         </div>
                         <div class="main-chat">
                             <div class="messaggi">
-                                <div class="messaggio-prova">
+                                <div class="messaggio-scritto">
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla sit vero fugit, voluptates vel voluptatibus nemo commodi harum, distinctio maiores ipsa sunt qui eius nihil, reprehenderit sapiente perferendis veniam pariatur.
                                 </div>
                             </div>
