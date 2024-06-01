@@ -8,22 +8,83 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">
         <header></header>
         <main>
-            <div class="conatine">
+            <div class="container">
                 <section class="utenti">
                     <article>
-                        <div class="chatutenti">
-                            <img src="./img/avatar_1.jpg" alt="" class="utente-img">
+                        <div class="chat-utente">
+                            <div class="utente">
+                                <img src="./img/avatar_io.jpg" alt="" class="utente-img">
+                                <h2>Sofia</h2>
+                            </div>
+                            <div>
+                                <span class="circle"></span>
+                                <span class="message"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        <div class="notifica">
+                            <span class="notification"></span>
+                            <p>
+                                Ricevi notifiche di nuovi messaggi <br>
+                                <a href="#">Attiva notifiche desktop</a>
+                            </p>
+                        </div>
+                        <div>
+                            <div class="search">
+                                <div class="glass"></div>
+                                <input type="search" placeholder="Cerca o inizia una nuova chat">
+                            </div>
+                        </div>
+                        <div class="cont-chat">
+                            <div class="chataperte">
+                                <div class="dati">
+                                    <img src="./img/avatar_1.jpg" alt="" class="utente-img">
+                                    <p>
+                                        Ricevi notifiche di nuovi messaggi <br>
+                                        <span>Attiva notifiche desktop</span>
+                                    </p>
+                                </div>
+                                <div class="orario">12:00</div>
+                            </div>
                         </div>
                     </article>
                 </section>
                 <section class="chat">
-                    <div></div>
+                    <article>
+                        <div class="chat-utente">
+                            <div class="utente">
+                                <img src="./img/avatar_1.jpg" alt="" class="utente-img">
+                                <p>
+                                    Ricevi notifiche di nuovi messaggi <br>
+                                    <span>Attiva notifiche desktop</span>
+                                </p>
+                            </div>
+                            <div>
+                                <span class="glass"></span>
+                                <span class="paperclip"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        <div class="main-chat">
+                            <div class="messaggi">
+                                <div class="messaggio-prova">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla sit vero fugit, voluptates vel voluptatibus nemo commodi harum, distinctio maiores ipsa sunt qui eius nihil, reprehenderit sapiente perferendis veniam pariatur.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-chat">
+                            <span class="smile"></span>
+                            <input type="text" placeholder="Scrivi un messaggio">
+                            <span class="microphone"></span>
+                        </div>
+                    </article>
                 </section>
             </div>
         </main>

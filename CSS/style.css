@@ -3,6 +3,63 @@
     margin: 0;
     box-sizing: border-box;
 }
+img{
+    display: block;
+    max-width: 100%;
+}
+/* RESET*/
+.notification::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f1f6";
+    background-color: white;
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #8edafc;
+}
+.message::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f27a";
+    color: #b1b1b1;
+}
+.dot::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f142";
+    color: #b1b1b1;
+}
+.paperclip::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f0c6";
+    color: #b1b1b1;
+}
+.circle::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f1ce";
+    color: #b1b1b1;
+}
+.glass::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f002";
+    color: #b1b1b1;
+}
+.smile::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f118";
+    color: #6b7376;
+}
+.microphone::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;   
+    content: "\f130";
+    color: #6b7376;
+}
 body{
     background-color: #dadbd4;
     font-family: "Lato", sans-serif;
@@ -16,29 +73,90 @@ header{
 main{
     position: absolute;
     top: 30px;
-    left: 5%;
-    right: 5%;
+    left: 10%;
+    right: 10%;
     margin: 0 auto;
-    background-color: white;
+    background-color: #eaeaea;
     display: flex;
-    width: 90vh;
     bottom: 30px;
 }
 .container{
     display: flex;
-    flex-wrap: nowrap;
     width: 100%;
-    height: 100%;
 }
 section.utenti{
-    background-color: blue;
     width: 30%;
+    display: flex;
 }
 section.chat{
-    background-color: greenyellow;
     width: 70%;
+    display: flex;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 .utente-img{
     width: 80px;
     border-radius: 50%;
+}
+.utente{
+    display: flex;
+    align-items: center;
+}
+.chat-utente{
+    padding: .5rem;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.notifica{
+    display: flex;
+    align-items: center;
+    background-color: #8edafc;
+    padding: 1rem;
+}
+.search{
+    display: flex;
+    align-items: center;
+}
+input{
+    width: calc(100% - 1rem);
+    margin: .5rem;
+}
+.cont-chat{
+    overflow-y: scroll;
+    flex: 1;
+}
+.chataperte,
+.head-chat{
+    display: flex;
+    justify-content: space-between;
+}
+.dati{
+    display: flex;
+}
+.main-chat{
+    background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
+    flex: 1;
+}
+.messaggi{
+    width: 80%;
+    margin: 0 auto;
+}
+.messaggio-prova{
+    background-color: #d5f9ba;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.footer-chat{
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
