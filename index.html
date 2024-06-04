@@ -23,7 +23,7 @@
                                 <img src="./img/avatar_io.jpg" alt="" class="utente-img">
                                 <h2>Sofia</h2>
                             </div>
-                            <div>
+                            <div class="simbol">
                                 <span class="circle"></span>
                                 <span class="message"></span>
                                 <span class="dot"></span>
@@ -44,7 +44,7 @@
                         </div>
                         <div class="cont-chat">
                             <div class="chataperte">
-                                <div class="dati" v-for = "utente in contacts" @click="">
+                                <div class="dati" v-for = "(utente, index) in contacts" @click="setActiveContact(index)">
                                     <div class="img-name">
                                         <img :src="utente.avatar + '.jpg'" alt="" class="utente-img">
                                         <p>
@@ -68,16 +68,16 @@
                                     <span>Attiva notifiche desktop</span>
                                 </p>
                             </div>
-                            <div>
+                            <div class="simbol">
                                 <span class="glass"></span>
                                 <span class="paperclip"></span>
                                 <span class="dot"></span>
                             </div>
                         </div>
                         <div class="main-chat">
-                            <div class="messaggi">
-                                <div v-for="contact in contacts">
-                                    <p v-for="messaggi in contact.messages" :class="messaggi.status == 'sent' ? 'messaggio-scritto' : 'messaggio-ricevuto'">
+                            <div v-for="(contact, index) in contacts" :key="index" class="messaggi">
+                                <div v-for="messaggi in contact.messages" :class="activeIndex == index ? 'ciao' : 'diplay-none'">
+                                    <p  class='messaggio' :class="messaggi.status == 'sent' ? 'messaggio-scritto' : 'messaggio-ricevuto'">
                                         {{messaggi.message}}
                                     </p>
                                 </div>

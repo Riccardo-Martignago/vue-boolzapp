@@ -140,6 +140,9 @@ input{
     display: flex;
     justify-content: space-between;
 }
+.dati:hover{
+    background-color: #eaeaea;
+}
 .orario{
     text-align: right;
 }
@@ -147,23 +150,27 @@ input{
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
     flex: 1;
+    padding: 2rem 0;
 }
 .messaggi{
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
-.messaggio-scritto{
-    background-color: #d5f9ba;
+.messaggio{
+    width: 45%;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-    text-align: right;
+}
+
+.messaggio-scritto{
+    background-color: #d5f9ba;
+    align-self: flex-end;
 }
 .messaggio-ricevuto{
     background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
 }
 .footer-chat{
     background-color: #f3eeea;
@@ -171,4 +178,17 @@ input{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+.diplay-message{
+    display: block;
+}
+.diplay-none{
+    display: none;
+}
+.simbol > span{
+    padding: .5rem;
+}
+.ciao{
+    display: flex;
+    flex-direction: column;
 }
