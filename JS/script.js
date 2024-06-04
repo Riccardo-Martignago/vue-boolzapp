@@ -170,7 +170,7 @@ createApp({
         }
     },
     methods: {
-        setActiveContact(contactIndex) {
+        setActiveContact: function(contactIndex) {
             this.activeIndex = contactIndex
         },
         sentMessage: function(newMessage){
@@ -181,6 +181,15 @@ createApp({
             }
             this.contacts[this.activeIndex].messages.push(messageList)
             this.newMessageContent = ''
+            setTimeout(this.recivedMessage, 1000);
+        },
+        recivedMessage: function(){
+            const messageList = {
+                date: '10/01/2020 15:50:00',
+                message: 'ok',
+                status: 'received'
+            }
+            this.contacts[this.activeIndex].messages.push(messageList)
         }
     }
 }).mount('#app')
