@@ -22,3 +22,8 @@ Milestone 5 - opzionale
 Replico il layout
 Assegno due classi diverse per la sezione dei messaggi per farli apparire verdi e bianchi 
 Creo un v-for per stampare in pagina immagine e nome del contatto
+
+Milestone 2
+
+Creare un v-for per stampare i messaggi con un index definito
+Creare una funzione che al click modifica l'index e di conseguenza fa cambiare i messaggi della chat, immagine e nome 
