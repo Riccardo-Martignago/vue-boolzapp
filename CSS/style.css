@@ -188,7 +188,7 @@ input{
 .simbol > span{
     padding: .5rem;
 }
-.ciao{
+.column{
     display: flex;
     flex-direction: column;
 }

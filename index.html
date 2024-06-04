@@ -76,7 +76,7 @@
                         </div>
                         <div class="main-chat">
                             <div v-for="(contact, index) in contacts" :key="index" class="messaggi">
-                                <div v-for="messaggi in contact.messages" :class="activeIndex == index ? 'ciao' : 'diplay-none'">
+                                <div v-for="messaggi in contact.messages" :class="activeIndex == index ? 'column' : 'diplay-none'">
                                     <p  class='messaggio' :class="messaggi.status == 'sent' ? 'messaggio-scritto' : 'messaggio-ricevuto'">
                                         {{messaggi.message}}
                                     </p>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="footer-chat">
                             <span class="smile"></span>
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <input type="text" placeholder="Scrivi un messaggio" v-model="newMessageContent" @keyup.enter="sentMessage(newMessageContent)">
                             <span class="microphone"></span>
                         </div>
                     </article>

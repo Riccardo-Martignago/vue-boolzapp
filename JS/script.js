@@ -3,6 +3,7 @@ createApp({
     data() {
         return {
             activeIndex: 0,
+            newMessageContent: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -171,6 +172,15 @@ createApp({
     methods: {
         setActiveContact(contactIndex) {
             this.activeIndex = contactIndex
+        },
+        sentMessage: function(newMessage){
+            const messageList = {
+                date: '10/01/2020 15:50:00',
+                message: newMessage,
+                status: 'sent'
+            }
+            this.contacts[this.activeIndex].messages.push(messageList)
+            this.newMessageContent = ''
         }
     }
 }).mount('#app')
