@@ -2,6 +2,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            activeIndex: 2,
             contacts: [
                 {
                     name: 'Michele',
@@ -45,7 +46,7 @@ createApp({
                             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                             status: 'sent'
                         }
-                    ],
+                    ]
                 },
                 {
                     name: 'Samuele',
@@ -162,9 +163,15 @@ createApp({
                             message: 'OK!!',
                             status: 'received'
                         }
-                    ],
+                    ]
                 }
-            ]
+            ],
+            activeContact: ''
+        }
+    },
+    methods: {
+        setActiveContact() {
+            this.activeContact = this.contacts[this.activeIndex].messages
         }
     }
 }).mount('#app')

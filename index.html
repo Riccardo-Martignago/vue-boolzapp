@@ -62,9 +62,9 @@
                     <article>
                         <div class="chat-utente">
                             <div class="utente">
-                                <img src="./img/avatar_1.jpg" alt="" class="utente-img">
+                                <img :src="contacts[activeIndex].avatar + '.jpg'" alt="" class="utente-img">
                                 <p>
-                                    Ricevi notifiche di nuovi messaggi <br>
+                                    {{contacts[activeIndex].name}} <br>
                                     <span>Attiva notifiche desktop</span>
                                 </p>
                             </div>
@@ -76,8 +76,8 @@
                         </div>
                         <div class="main-chat">
                             <div class="messaggi">
-                                <div v-for="(contact, index) in contacts">
-                                    <p v-for="messaggi in contact.messages[index]" :class="messaggi.status == 'sent' ? 'messaggio-scritto' : 'messaggio-ricevuto'">
+                                <div v-for="contact in contacts">
+                                    <p v-for="messaggi in contact.messages" :class="messaggi.status == 'sent' ? 'messaggio-scritto' : 'messaggio-ricevuto'">
                                         {{messaggi.message}}
                                     </p>
                                 </div>
